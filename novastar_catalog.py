@@ -1,125 +1,104 @@
 novastar_products = [
     {
-        "model": "M10",
-        "type": "Main Control Card",
+        "model": "MCTRL R5",
+        "type": "LED Display Controller",
         "max_resolution_width": 3840,
         "max_resolution_height": 2160,
-        "card_count": 1,
-        "total_pixels": 8_294_400,
-        "description": "Scheda di controllo principale, supporta risoluzioni fino a 4K",
-        "ports": "HDBCS (CobraNet)",
-        "recommended_use": "LED wall piccoli/medi"
+        "total_pixels": 2_600_000,
+        "ports": "8 x Gigabit Ethernet; 2 x 10G optical",
+        "recommended_use": "LED wall fino a 4K",
+        "description": "Controller MCTRL con ingressi 6G-SDI, DVI e HDMI 1.4.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=25",
     },
     {
-        "model": "M3",
-        "type": "Main Control Card",
-        "max_resolution_width": 1920,
-        "max_resolution_height": 1080,
-        "card_count": 1,
-        "total_pixels": 2_073_600,
-        "description": "Scheda compatta per installazioni di piccole dimensioni",
-        "ports": "HDBCS",
-        "recommended_use": "LED wall piccoli"
+        "model": "MCTRL4K",
+        "type": "LED Display Controller",
+        "max_resolution_width": 7680,
+        "max_resolution_height": 7680,
+        "total_pixels": 8_800_000,
+        "ports": "16 x Gigabit Ethernet; 4 x 10G optical",
+        "recommended_use": "LED wall 4K e ad alta risoluzione",
+        "description": "Controller MCTRL4K con ingressi DP 1.2, HDMI 2.0 e DVI.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=24",
     },
     {
-        "model": "M6",
-        "type": "Main Control Card",
+        "model": "MCTRL700",
+        "type": "LED Display Controller",
         "max_resolution_width": 3840,
-        "max_resolution_height": 2160,
-        "card_count": 1,
-        "total_pixels": 8_294_400,
-        "description": "Scheda principale economica per risoluzioni fino a 4K",
-        "ports": "HDBCS",
-        "recommended_use": "LED wall medi"
+        "max_resolution_height": 3840,
+        "total_pixels": 2_300_000,
+        "ports": "6 x Gigabit Ethernet",
+        "recommended_use": "LED wall fino a 1920 x 1200",
+        "description": "Controller MCTRL con ingressi DVI e HDMI 1.3.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=29",
     },
     {
-        "model": "HD650",
-        "type": "Video Processor",
-        "max_resolution_width": 2560,
-        "max_resolution_height": 1600,
-        "card_count": 1,
-        "total_pixels": 4_096_000,
-        "description": "Video processor HDR per installazioni di medie/grandi dimensioni",
-        "ports": "HDBCS, HUB75",
-        "recommended_use": "LED wall medi/grandi"
-    },
-    {
-        "model": "HD240",
-        "type": "Receiving Card",
-        "max_resolution_width": 1920,
-        "max_resolution_height": 1080,
-        "card_count": 1,
-        "total_pixels": 2_073_600,
-        "description": "Scheda ricevente per LED wall distribuiti",
-        "ports": "HUB75, HDBCS",
-        "recommended_use": "Componente ricevente dei panel"
-    },
-    {
-        "model": "E4S",
-        "type": "Main Control Card",
-        "max_resolution_width": 6144,
-        "max_resolution_height": 2304,
-        "card_count": 4,
-        "total_pixels": 56_623_104,
-        "description": "Alta performance per grandi LED wall con espandibilità multi-card",
-        "ports": "HDBCS, HUB75, CobraNet",
-        "recommended_use": "LED wall molto grandi"
-    },
-    {
-        "model": "G4S",
-        "type": "Sending Card",
+        "model": "MCTRL600",
+        "type": "LED Display Controller",
         "max_resolution_width": 3840,
-        "max_resolution_height": 2160,
-        "card_count": 4,
-        "total_pixels": 37_748_736,
-        "description": "Scheda di invio per flussi video ad alta risoluzione",
-        "ports": "HDBCS, HUB75, SDI, HDMI",
-        "recommended_use": "Flusso in ingresso per grandi installazioni"
+        "max_resolution_height": 3840,
+        "total_pixels": 2_300_000,
+        "ports": "4 x Gigabit Ethernet",
+        "recommended_use": "LED wall fino a 1920 x 1200",
+        "description": "Controller MCTRL compatto per installazioni di piccola/media dimensione.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=28",
+    },
+    {
+        "model": "MCTRL660",
+        "type": "LED Display Controller",
+        "max_resolution_width": 3840,
+        "max_resolution_height": 2560,
+        "total_pixels": 1_300_000,
+        "ports": "4 x Gigabit Ethernet",
+        "recommended_use": "LED wall fino a 1,3 milioni di pixel",
+        "description": "Controller MCTRL con ingressi DVI e HDMI 1.3.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=27",
+    },
+    {
+        "model": "MCTRL660 PRO",
+        "type": "LED Display Controller",
+        "max_resolution_width": 3840,
+        "max_resolution_height": 2560,
+        "total_pixels": 3_900_000,
+        "ports": "6 x Gigabit Ethernet; 2 x 10G optical",
+        "recommended_use": "LED wall fino a 3,9 milioni di pixel",
+        "description": "Controller MCTRL PRO con ingressi DVI, HDMI 1.4 e 3G-SDI.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=26",
+    },
+    {
+        "model": "MCTRL300",
+        "type": "LED Display Controller",
+        "max_resolution_width": 3840,
+        "max_resolution_height": 2560,
+        "total_pixels": 1_300_000,
+        "ports": "2 x Gigabit Ethernet",
+        "recommended_use": "LED wall fino a 1,3 milioni di pixel",
+        "description": "Controller MCTRL compatto con ingresso DVI.",
+        "official_url": "https://www.novastar.tech/product/detail.html?catid=2&id=30",
     },
 ]
 
 
 def get_recommended_controller(total_width_px: int, total_height_px: int) -> list:
-    """Torna la lista dei controller NovaStar raccomandati per una data risoluzione."""
+    """Restituisce i controller MCTRL del catalogo ufficiale adatti alla risoluzione."""
     if total_width_px <= 0 or total_height_px <= 0:
         raise ValueError("Le dimensioni della risoluzione devono essere maggiori di zero.")
 
-    recommendations = []
-    for prod in novastar_products:
-        if prod["type"] == "Main Control Card":
-            if (prod["max_resolution_width"] >= total_width_px and
-                    prod["max_resolution_height"] >= total_height_px):
-                recommendations.append(prod)
-            elif (total_width_px <= 8192 and total_height_px <= 4320):
-                # Se supera le capacità di una singola scheda, suggerisci M10 o E4S in modalità multi-card
-                pass
+    total_pixels = total_width_px * total_height_px
+    compatible = [
+        product
+        for product in novastar_products
+        if total_width_px <= product["max_resolution_width"]
+        and total_height_px <= product["max_resolution_height"]
+        and total_pixels <= product["total_pixels"]
+    ]
 
-    # Se nessuna scheda singola basta, suggerisci soluzioni multi-card
-    if not recommendations:
-        if total_width_px * total_height_px <= 56_623_104:
-            for prod in novastar_products:
-                if prod["model"] == "E4S":
-                    recommendations.append(prod)
-                    break
-        else:
-            recommendations.append(
-                {"model": "HD650 (più riceventi HD240)",
-                 "type": "Video Processor + Receiving Cards",
-                 "max_resolution_width": 2560,
-                 "max_resolution_height": 1600,
-                 "card_count": None,
-                 "total_pixels": None,
-                 "description": "Soluzione modulare con scheda invio HD650 e schede riceventi HD240 distribuite sui pannelli.",
-                 "ports": "HDBCS",
-                 "recommended_use": "LED wall molto grandi (> 8M × 4M)"}
-            )
-
-    return recommendations
+    return sorted(compatible, key=lambda product: product["total_pixels"])
 
 
 def get_required_receiving_cards(total_width_px: int, total_height_px: int,
                                  panel_width_px: int, panel_height_px: int) -> dict:
-    """Calcola quante schede riceventi (es. HD240 1920×1080) servono."""
+    """Mantiene il calcolo legacy delle schede riceventi, senza usarlo per la matrice MCTRL."""
     if total_width_px <= 0 or total_height_px <= 0:
         raise ValueError("Le dimensioni della risoluzione devono essere maggiori di zero.")
     if panel_width_px <= 0 or panel_height_px <= 0:
@@ -131,7 +110,7 @@ def get_required_receiving_cards(total_width_px: int, total_height_px: int,
         "cards_per_row": max(1, cards_needed_width),
         "cards_per_col": max(1, cards_needed_height),
         "total_cards": max(1, cards_needed_width * cards_needed_height),
-        "recommendation": f"{max(1, cards_needed_width)} × {max(1, cards_needed_height)} riceventi HD240"
+        "recommendation": f"{max(1, cards_needed_width)} x {max(1, cards_needed_height)} schede riceventi",
     }
 
 

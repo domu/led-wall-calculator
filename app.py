@@ -1,8 +1,6 @@
 import streamlit as st
 from novastar_catalog import (
-    novastar_products,
     get_recommended_controller,
-    get_required_receiving_cards,
     calculate_panel_pixels,
 )
 
@@ -63,6 +61,9 @@ with st.sidebar:
     st.info(
         "💡 I calcoli vengono aggiornati automaticamente. "
         "Il prodotto è basato sui dati tipici del catalogo NovaStar."
+    )
+    st.markdown(
+        "[Davide Pedretti Biagioni - 2026](https://linktr.ee/davide.pedrettibiagioni)"
     )
 
 
@@ -143,19 +144,10 @@ summary_data = {
 }
 
 import pandas as pd
-st.dataframe(pd.DataFrame(summary_data), use_container_width=True)
+st.dataframe(pd.DataFrame(summary_data), width="stretch")
 
-# Calcolo schede riceventi
-recv_info = get_required_receiving_cards(total_width_px, total_height_px, w_px, h_px)
-
-with st.expander("📋 Dettagli configurazione riceventi"):
-    st.write(f"**Riceventi per riga:** {recv_info['cards_per_row']}")
-    st.write(f"**Riceventi per colonna:** {recv_info['cards_per_col']}")
-    st.write(f"**Totale schede riceventi:** {recv_info['total_cards']}")
-    st.write(f"**Configurazione:** `{recv_info['recommendation']}`")
-
-# Controller raccomandati
-st.subheader("🎯 Controller NovaStar Raccomandati")
+# Controller MCTRL raccomandati
+st.subheader("🎯 Matrici NovaStar MCTRL raccomandate")
 
 recs = get_recommended_controller(total_width_px, total_height_px)
 
@@ -167,19 +159,17 @@ if recs:
             with cl1:
                 st.metric("Max risoluzione", f"{rc['max_resolution_width']} × {rc['max_resolution_height']}")
             with cl2:
-                if rc["card_count"]:
-                    st.metric("Schede supportate", str(rc["card_count"]))
-                else:
-                    st.metric("Tipo", "Modulare")
+                st.metric("Serie", "NovaStar MCTRL")
             with cl3:
                 st.metric("Max pixel totali", f"{rc['total_pixels']:,}" if rc["total_pixels"] else "N/A")
             st.info(rc["description"])
             st.caption(f"🔌 {rc['ports']}  |  📌 {rc['recommended_use']}")
+            st.link_button("Scheda prodotto ufficiale", rc["official_url"])
             st.divider()
 else:
     st.warning(
         f"La risoluzione richiesta ({total_width_px} × {total_height_px}) è molto grande. "
-        f"È necessario un sistema distribuito con video processor + multiple schede riceventi."
+        "Nessuna matrice MCTRL del catalogo ufficiale gestisce da sola questa risoluzione."
     )
 
 # ── Sezione 5: Visualizzazione layout ─────────────────────────────
@@ -218,7 +208,7 @@ for r in range(panels_height):
         })
 
 df_panels = pd.DataFrame(panel_details)
-st.dataframe(df_panels, use_container_width=True)
+st.dataframe(df_panels, width="stretch")
 
 
 # ── Footer ────────────────────────────────────────────────────────

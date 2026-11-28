@@ -4,6 +4,7 @@ from novastar_catalog import (
     calculate_panel_pixels,
     get_required_receiving_cards,
     get_recommended_controller,
+    novastar_products,
 )
 
 
@@ -31,7 +32,14 @@ class NovastarCatalogTests(unittest.TestCase):
 
     def test_recommends_available_controller_for_4k(self):
         models = {item["model"] for item in get_recommended_controller(3840, 2160)}
-        self.assertTrue({"M10", "M6", "E4S"} & models)
+        self.assertIn("MCTRL4K", models)
+
+    def test_catalog_contains_only_mctrl_series(self):
+        self.assertTrue(novastar_products)
+        self.assertTrue(all(item["model"].startswith("MCTRL") for item in novastar_products))
+
+    def test_catalog_recommends_no_controller_above_loading_capacity(self):
+        self.assertEqual(get_recommended_controller(7680, 7680), [])
 
 
 if __name__ == "__main__":
