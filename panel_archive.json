@@ -1,0 +1,11 @@
+[
+  {
+    "name": "ODS_Building",
+    "manufacturer": "tecn ovision",
+    "project": "building",
+    "width_mm": 500,
+    "height_mm": 1000,
+    "pixel_pitch_mm": 3.9,
+    "max_absorption_w": 60
+  }
+]
